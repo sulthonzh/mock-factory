@@ -1,0 +1,39 @@
+{
+  "name": "mock-factory",
+  "version": "1.0.0",
+  "description": "Spin up a realistic mock API server from OpenAPI specs or TypeScript types in 5 seconds",
+  "main": "dist/index.js",
+  "bin": {
+    "mock-factory": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format esm,cjs --dts",
+    "test": "vitest run",
+    "start": "node dist/cli.js"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "openapi",
+    "typescript",
+    "fake-data",
+    "testing"
+  ],
+  "author": "sulthonzh",
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@hono/node-server": "^1.0.0",
+    "commander": "^12.0.0",
+    "hono": "^4.0.0",
+    "js-yaml": "^4.1.0",
+    "json-schema-faker": "^0.5.8"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.0",
+    "@types/node": "^25.9.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
