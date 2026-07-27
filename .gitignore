@@ -2,3 +2,14 @@ node_modules/
 dist/
 *.tgz
 mock-data.json
+
+build/
+.env
+.env.*
+*.log
+coverage/
+.DS_Store
+__pycache__/
+.venv/
+*.egg-info/
+.mypy_cache/
