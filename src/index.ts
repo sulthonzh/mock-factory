@@ -174,7 +174,7 @@ function generateByType(
   if (lowerKey === 'zip' || lowerKey === 'zipcode') return faker.location.zipCode();
   if (lowerKey === 'company') return faker.company.name();
   if (lowerKey === 'price' || lowerKey === 'amount') return faker.number.float({ min: 1, max: 1000, fractionDigits: 2 });
-  if (lowerKey.includes('color')) return faker.internet.color();
+  if (lowerKey.includes('color')) return faker.color.human();
   if (lowerKey === 'id' || lowerKey.endsWith('id')) return faker.number.int({ min: 1, max: 10000 });
   if (lowerKey === 'slug') return faker.lorem.slug({ min: 1, max: 3 });
 
