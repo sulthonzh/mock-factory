@@ -32,11 +32,9 @@ jobs:
       - name: Create Release Pull Request or Publish
         uses: changesets/action@v2.1.0
         with:
-          publish-script: npx changeset publish
-          version-script: npx changeset version
+          version-script: npx --package @changesets/cli changeset version
           commit-message: "chore(release): version packages"
           pr-title: "chore(release): version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: "true"
