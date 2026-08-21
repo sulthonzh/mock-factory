@@ -1,5 +1,5 @@
 {
-  "name": "mock-factory",
+  "name": "@sulthonzh/mock-factory",
   "version": "1.0.0",
   "description": "Spin up a realistic mock API server from OpenAPI specs or TypeScript types in 5 seconds",
   "main": "dist/index.js",
@@ -43,5 +43,9 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulthonzh/mock-factory.git"
   }
 }
