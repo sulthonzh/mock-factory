@@ -2,5 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "allowedVersions": "^6.0.0",
+      "description": "TS 7 breaks tsup dts + tsc (fleet flag #20/#27)"
+    }
   ]
 }

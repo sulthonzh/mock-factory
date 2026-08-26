@@ -1,4 +1,4 @@
-import jsYaml from 'js-yaml';
+import { load as yamlLoad } from 'js-yaml';
 import { faker } from '@faker-js/faker/locale/en';
 
 export interface MockResource {
@@ -26,7 +26,7 @@ const DEFAULT_CONFIG: MockConfig = {
 export function parseOpenAPI(raw: string): MockResource[] {
   let spec: any;
   try {
-    spec = jsYaml.load(raw) as any;
+    spec = yamlLoad(raw) as any;
   } catch {
     spec = JSON.parse(raw);
   }
